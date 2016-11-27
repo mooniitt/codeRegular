@@ -14,7 +14,7 @@ fs.readFile(filename,function(err,data){
 		return console.log('err')
 	}
 	console.log('successed')
-	var re = /(;\r\n)|(;\n)/g
+	var re = /(; *[\r\n])/g
 	var text = data.toString()
 	console.log(re.test(text))
 	content = text.replace(re,'\n')
